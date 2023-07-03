@@ -1,0 +1,72 @@
+Problem Statement
+The task is very simple: given two integers A and B, write a program to add these two numbers and output it.
+
+Input Format
+The first line contains an integer T, the total number of test cases. Then follow T lines, each line contains two Integers A and B.
+
+Output Format
+For each test case, add A and B and display the sum in a new line.
+input:=      3
+            1 2
+            100 200
+            10 40
+output:=  3
+          300
+          50
+
+
+
+
+import java.io.OutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.util.StringTokenizer;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.InputStream;
+
+public class Main {
+	public static void main(String[] args) {
+	
+		InputStream inputStream = System.in;
+
+		InputReader in = new InputReader(inputStream);
+
+		int T = in.nextInt();
+		while (T-- > 0) {
+			// Read the numbers a and b.
+			int a = in.nextInt();
+			int b = in.nextInt();
+		
+			int ans = a + b;
+			System.out.println(ans);
+		}
+	}
+
+	static class InputReader {
+		public BufferedReader reader;
+		public StringTokenizer tokenizer;
+
+		public InputReader(InputStream stream) {
+			reader = new BufferedReader(new InputStreamReader(stream), 32768);
+			tokenizer = null;
+		}
+
+		public String next() {
+			while (tokenizer == null || !tokenizer.hasMoreTokens()) {
+				try {
+				    tokenizer = new StringTokenizer(reader.readLine());
+				} catch (IOException e) {
+				    throw new RuntimeException(e);
+				}
+			}
+			return tokenizer.nextToken();
+		}
+
+		public int nextInt() {
+			return Integer.parseInt(next());
+		}
+	}
+}
