@@ -1,0 +1,40 @@
+Instagram
+
+Problem
+Chef categorises an instagram account as spam, if, the following count of the account is more than 10 times the count of followers.
+Given the following and follower count of an account as X and Y respectively, find whether it is a spam account.
+Explanation:
+Test case 1: 
+The following count is 1 while the follower count is 10. Since the following count is not more than 10 times the follower count, the account is not spam.
+Test case 2: 
+The following count is 10 while the follower count is 1. Since the following count is not more than 10 times the follower count, the account is not spam.
+Test case 3:
+The following count is 11 while the follower count is 1. Since the following count is more than 10 times the follower count, the account is spam.
+Test case 4:
+The following count is 97 while the follower count is 7. Since the following count is more than 10 times the follower count, the account is spam.
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int i=0;i<t;i++){
+		    int g=sc.nextInt();     //following
+		    int r=sc.nextInt();     //follower
+		    int a=r*10;
+		    if(a<g){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("NO");
+		    }
+		}// your code goes here
+	}
+}
