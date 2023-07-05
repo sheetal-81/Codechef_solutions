@@ -1,0 +1,35 @@
+Parliament
+
+Problem
+An important resolution is being discussed in the Parliament of Chefland.
+There are N members present in the Parliament out of which X members voted in favour of the resolution and the remaining voted against it.
+According to the constitution of Chefland, a resolution is passed if and only if half or more than half the members present in the Parliament vote in favour of the resolution.
+Determine if the resolution is passed or not.
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	
+	{
+	    Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int i=0;i<t;i++){
+		    int x=sc.nextInt();         //favor
+		    int y=sc.nextInt();         //against
+		    int a=y*2;
+		    if(a>=x){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("No");
+		    }
+		    
+		}// your code goes here
+	}
+}
