@@ -1,0 +1,33 @@
+Course Registration
+Problem
+There is a group of N friends who wish to enroll in a course together. 
+The course has a maximum capacity of M students that can register for it. 
+If there are K other students who have already enrolled in the course, determine if it will still be possible for all the N friends to do so or not.
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int i=0;i<t;i++){
+		    int N=sc.nextInt();     //wish to enroll
+		    int M=sc.nextInt();     //maximum capacity
+		    int K=sc.nextInt();     //already enrolled
+		    int result=N+K;
+		    if(M>=result){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("NO");
+		    }
+		    
+		}// your code goes here
+	}
+}
