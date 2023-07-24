@@ -1,0 +1,33 @@
+Problem
+Chef is playing a videogame, and is getting close to the end. He decides to finish the rest of the game in a single session.
+There are X levels remaining in the game, and each level takes Chef Y minutes to complete. 
+To protect against eye strain, Chef also decides that every time he completes 3 levels, he will take a Z minute break from playing.
+Note that there is no need to take this break if the game has been completed.
+How much time (in minutes) will it take Chef to complete the game?
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int i=0;i<t;i++){
+		    int a=sc.nextInt();
+		    int b=sc.nextInt();
+		    int c=sc.nextInt();
+		    int count=a*b;
+		    int val=a/3;
+			if(a%3==0)
+			    val=val-1;
+			count+=val*c;
+			System.out.println(count); 
+		}// your code goes here
+	}
+}
