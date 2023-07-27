@@ -1,0 +1,55 @@
+Problem
+Chef is confused whether to go out and eat at the restaurant or order food online.
+The online order costs N rupees while the cost of eating at the restaurant is M rupees.
+However, Chef has a discount coupon with which he can avail flat 10% off on his online order.
+Find the cheaper option for Chef to eat, i.e., whether to order food online or eat at the restaurant.
+
+Explanation:
+Test case 1: The final price of ordering online would be 500−(10% of 500)=450 which is less than the price of dining.
+Thus, Chef should order online.
+
+Test case 2: The final price of ordering online would be 500−(10% of 500)=450 which is not less than 400. 
+Thus, Chef should choose dining option.
+
+Test case 3: Even after the 10% discount, cost of ordering online is higher.
+Thus, Chef should choose dining option.
+
+Test case 4: After 10% discount, cost of ordering online is 90.
+The costs of ordering online and dining at restaurant are same. Thus, Chef can choose any option.
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int i=0;i<t;i++){
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		double z=x-(0.1*x);
+		
+		if(z<y){
+		    System.out.println("ONLINE");
+		}if(z>y){
+		    System.out.println("DINING");
+		}if(z==y){
+		    System.out.println("EITHER");
+		}
+		    
+		}
+		// your code goes here
+	}
+}
+
+
+
+
+
+ 
