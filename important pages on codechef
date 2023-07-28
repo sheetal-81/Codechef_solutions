@@ -1,0 +1,42 @@
+Problem
+MoEngage noticed that some users are not aware of the practice page on CodeChef, and some others are not aware of the rated contests on CodeChef. 
+So, MoEngage wants to send an email to the users depending on which of the following groups they fall into:
+If the user has never submitted on the practice page then send an email with the text:
+https://www.codechef.com/practice
+If the user has submitted on the practice page, but never participated in a contest then send an email with the text:
+https://www.codechef.com/contests
+If the user has submitted on the practice page as well as participated in a contest then send an email with the text:
+https://discuss.codechef.com
+so that they may discuss with other members of the community.
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		if(a==1)
+		{
+		    
+    		    if(b==1){
+    		    System.out.println("https://discuss.codechef.com");
+    		    }
+    		    else
+    		    {
+    		    System.out.println("https://www.codechef.com/contests");
+    		    }
+		}
+		 else
+		 {
+		    System.out.println("https://www.codechef.com/practice");
+		 }// your code goes here
+	}
+}
