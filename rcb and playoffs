@@ -1,0 +1,37 @@
+Problem
+Team RCB has earned X points in the games it has played so far in this year's IPL.
+To qualify for the playoffs they must earn at least a total of Y points. 
+They currently have Z games left, in each game they earn 2 points for a win, 1 point for a draw, and no points for a loss.
+Is it possible for RCB to qualify for the playoffs this year?
+
+Input Format
+First line will contain 
+
+T, number of testcases. Then the testcases follow.
+Each testcase contains of a single line of input, three integers X,Y,Z.
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int i=0;i<t;i++){
+		    int a=sc.nextInt();
+		    int b=sc.nextInt();
+		    int c=sc.nextInt();
+		    if(a+(2*c)>=b){
+		        System.out.println("yes");
+		    }else{
+		        System.out.println("no");
+		    }
+		}// your code goes here
+	}
+}
