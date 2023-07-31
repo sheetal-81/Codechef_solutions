@@ -1,0 +1,42 @@
+Problem
+Alice has recently learned in her economics class that the market is said to be in equilibrium when the supply is equal to the demand.
+Alice has market data for N time points in the form of two integer arrays S and D.
+Here, S i denotes the supply at theℎi th  point of time and D i denotes the demand at the ℎi th  point of time, for each 1≤i≤N.
+Help Alice in finding out the number of time points at which the market was in equilibrium.
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int a=0;a<t;a++)
+		{
+		    int value=0;
+		    int b=sc.nextInt();
+		    int []x=new int[b];
+		    int []y=new int[b];
+		    for(int i=0;i<b;i++){
+		        x[i]=sc.nextInt();
+		    }
+		    for(int j=0;j<b;j++){
+		        y[j]=sc.nextInt();
+		    }
+		    for(int k=0;k<b;k++){
+		        if(x[k]==y[k])
+		        {
+		            value++;
+		        }
+		        
+		    }
+		    System.out.println(value);
+		    
+		}
+	}
+}
