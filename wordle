@@ -1,0 +1,43 @@
+Problem
+Chef invented a modified wordle.
+There is a hidden word S and a guess word T, both of length 5.
+Chef defines a string M to determine the correctness of the guess word. For the ℎi th
+index:
+If the guess at the ℎi th index is correct, the ℎi th character of M is G.
+If the guess at the ℎi th index is wrong, the ℎi th character of M is B.
+Given the hidden word S and guess T, determine string M.
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int i=0;i<t;i++)
+		{
+		    String a=sc.next();
+		    String b=sc.next();
+		    String c=" ";
+		    
+		    for(int j=0;j<5;j++)
+		    {
+		        if(a.charAt(j)==b.charAt(j))
+		        {
+		            c=c+"G";
+		        }
+		        else
+		        {
+		            c=c+"B";
+		        }
+		    }
+		    System.out.println(c);
+		}// your code goes here
+	}
+}
