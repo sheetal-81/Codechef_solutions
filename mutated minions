@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    
+    // Function to count the number of Wolverine-like minions for each test case
+    public static int countWolverineMinions(int N, int K, int[] minions) {
+        int count = 0;
+        for (int minion : minions) {
+            // Calculate the new characteristic value after transmogrification
+            int newValue = minion + K;
+            // Check if the new value is divisible by 7
+            if (newValue % 7 == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the number of test cases
+        int T = scanner.nextInt();
+        for (int t = 0; t < T; t++) {
+            // Read N and K for each test case
+            int N = scanner.nextInt();
+            int K = scanner.nextInt();
+            // Read the initial characteristic values of the minions
+            int[] minions = new int[N];
+            for (int i = 0; i < N; i++) {
+                minions[i] = scanner.nextInt();
+            }
+
+            // Call the function to count Wolverine-like minions and print the result
+            int result = countWolverineMinions(N, K, minions);
+            System.out.println(result);
+        }
+
+        scanner.close();
+    }
+}
